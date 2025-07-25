@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Collection</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="light">
+
+  <!-- Toggle -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <!-- Game Collection -->
+  <section class="game-section">
+    <h1 class="section-title">🎮 Game Projects 🎮</h1>
+
+    <div class="card-grid">
+      
+
+      <div class="card" onclick="openGame('drum')">
+        <img src="./Images/drumdet.jpg" alt="Drum Kit">
+        <div class="card-content">
+          <h2>Drum Kit</h2>
+          <p>Interactive drum kit using keyboard keypresses to trigger drum sounds.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openGame('batball')">
+        <img src="./Images/bat ball stump.avif" alt="Bat Ball Stump">
+        <div class="card-content">
+          <h2>Bat Ball Stump</h2>
+          <p>Mini cricket game using random DOM logic to simulate cricket outcomes.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openGame('dice')">
+        <img src="./Images/dice.jpg" alt="Dice Game">
+        <div class="card-content">
+          <h2>Dice Game</h2>
+          <p>Roll two dice and compare scores to find the winner. Built with JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="./PROJECT(drum-kit)/Drum Kit Starting Files/drum.html"></a>
+
+  <!-- Footer -->
+  <footer>
+    <button class="back-btn" onclick="goBack()">← Back</button>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>

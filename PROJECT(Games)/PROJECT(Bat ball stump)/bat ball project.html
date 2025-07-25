@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat ball stump game</title>
+    <link rel="stylesheet" href="./bat ball project .css">
+</head>
+<body>
+    <h1 id="title">Bat Ball Stump Game</h1>
+    <div id="rules">🚨GAME RULES :🏏 defeats 🥎 , 🥎 defeats <img class="s-img" width="" height="15" alt="Cricket Png - Transparent Cricket Stump Png, Png Download , Transparent ..." title="Cricket Png - Transparent Cricket Stump Png, Png Download , Transparent ..." data-pos="3" src="https://up.yimg.com/ib/th?id=OIP.2CUIzzCrK9wCziIr22YxowHaKK&amp;pid=Api&amp;rs=1&amp;c=1&amp;qlt=95&amp;w=74&amp;h=102"> , <img class="s-img" width="" height="15" alt="Cricket Png - Transparent Cricket Stump Png, Png Download , Transparent ..." title="Cricket Png - Transparent Cricket Stump Png, Png Download , Transparent ..." data-pos="3" src="https://up.yimg.com/ib/th?id=OIP.2CUIzzCrK9wCziIr22YxowHaKK&amp;pid=Api&amp;rs=1&amp;c=1&amp;qlt=95&amp;w=74&amp;h=102"> defeats 🏏
+    </div>
+    <h2>Player choice:</h2>
+    <div id="game">
+    <button class="button" onclick="
+        computerChoice=generateComputerChoice();
+        let resultMsg=getResult('BAT',computerChoice);
+        showresult('BAT', computerChoice , resultMsg);
+        ">
+        <img class="image" src="./cricket-bats.jpg">BAT</button>
+    
+
+    <button class="button" onclick="
+        computerChoice=generateComputerChoice();
+        resultMsg=getResult('BALL',computerChoice);
+        showresult('BALL', computerChoice , resultMsg);
+        ">
+        <img class="image" src="./cricket ball image.jpg"> BALL</button>
+    
+
+    <button class="button" onclick="
+        computerChoice=generateComputerChoice();
+        resultMsg=getResult('STUMP',computerChoice);
+        showresult('STUMP', computerChoice , resultMsg);
+        ">
+        <img class="image"  src="./stump image.jpg">
+        STUMP
+    </button>
+    </div>
+
+    <h3 id="user-move"> </h3>
+    <h3 id="Computer-move"> </h3>
+    <h3 id="result"> </h3>
+    <h2 id="score"></h2>
+
+     <button id="reset-button" onclick="localStorage.clear()
+       resetscore();
+    "> ↻ RESET</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer>
+        ...❤️❤️❤️...
+    </footer>
+
+
+    <script>
+        let scorestr=localStorage.getItem('score');
+        let score;
+        resetscore(scorestr);
+        function resetscore(scorestr){
+            score=scorestr? JSON.parse(scorestr):{
+                win: 0,
+                lost: 0,
+                tie: 0,
+            };
+
+            score.displayscore= function(){
+                return `Win😇 = ${score.win} , Lost🥺 = ${score.lost} , Tie😑 = ${score.tie}`;
+            };
+
+            showresult();
+        }
+
+        
+
+        let computerChoice;
+        function generateComputerChoice(){
+            let random_number = Math.random()*3;
+            if(random_number>0 && random_number <=1){
+                return 'BAT';
+            }else if(random_number>1 && random_number <=2){
+                return 'BALL';
+            }else{
+                return 'STUMP';
+            }
+        }
+
+        function getResult(usermove,computermove){
+            if (usermove==='BAT'){
+                if(computermove==='BALL'){
+                    score.win++;
+                    return 'USER WON';
+                }else if(computermove==='BAT'){
+                    score.tie++;
+                    return 'TIE';
+                }else if(computermove==='STUMP'){
+                    score.lost++;
+                    return 'COMPUTER WON';
+                }
+            }else if(usermove==='BALL'){
+                if(computermove==='STUMP'){
+                    return 'USER WON';
+                    score.win++;
+                }else if(computermove==='BALL'){
+                    score.tie++;
+                    return'TIE';
+                }else if(computermove==='BAT'){
+                    score.lost++;
+                    return 'COMPUTER WON';
+                }
+            }else{
+                if(computermove==='BAT'){
+                    score.win++;
+                    return 'USER WON';
+                }else if(computermove==='STUMP'){
+                    score.tie++;
+                    return 'TIE';
+                }else if(computermove==='BALL'){
+                    score.lost++;
+                    return 'COMPUTER WON';
+                }
+            }
+        }
+
+        function showresult(usermove,computermove,result){
+            localStorage.setItem('score',JSON.stringify(score));
+            document.querySelector('#user-move').innerText = 
+            usermove!== undefined ? `Player move : ${usermove}`:" ";
+            document.querySelector('#Computer-move').innerText = 
+            computermove !== undefined ? `Computer move : ${computermove}`: " ";
+            document.querySelector('#result').innerText =
+            result !== undefined ? `Match result🏆: ${result}`: " ";
+            document.querySelector('#score').innerText=`Score : ${score.displayscore()}`;
+    
+        }
+
+    </script>
+</body>
+</html>
