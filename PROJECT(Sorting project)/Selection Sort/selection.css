@@ -1,0 +1,100 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: rgb(11, 11, 10);
+  text-decoration: underline;
+  width: 70%;
+  font-family:sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin-left: 15%;
+}
+
+/* Two-column layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.left-panel {
+  width: 30%;
+  background: #e0e0e0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.left-panel h2 {
+  text-align: center;
+}
+
+.right-panel {
+  width: 70%;
+  padding: 40px;
+  background: #eeeded;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+button:nth-of-type(1) {
+  background-color: #4caf50;
+  color: white;
+}
+button:nth-of-type(1):hover {
+  background-color: #388e3c;
+}
+
+button:nth-of-type(2) {
+  background-color: #ff9800;
+  color: white;
+}
+button:nth-of-type(2):hover {
+  background-color: #f57c00;
+}
+
+button:nth-of-type(3) {
+  background-color: #f44336;
+  color: white;
+}
+button:nth-of-type(3):hover {
+  background-color: #d32f2f;
+}
+
+
+
+/* Array and status display */
+.array-container {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loop-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #444;
+}
+li {
+  margin-bottom: 5px;
+}

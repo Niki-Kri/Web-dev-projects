@@ -1,0 +1,155 @@
+:root {
+  --bg-color: #e2e6e6;
+  --text-color: #222;
+  --card-bg: #fff;
+  --btn-bg: #007bff;
+  --btn-color: #fff;
+  --subtitle: #4d4c4c;
+}
+
+body.dark {
+  --bg-color: #01112c;
+  --text-color: #e4e1e1;
+  --card-bg: #000106;
+  --btn-bg: #2196f3;
+  --btn-color: #fff;
+  --subtitle: #add5f5;
+}
+h1{
+    text-decoration: underline;
+    font-weight:800 ;
+}
+h2{
+    font-weight: 700;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.subtitle {
+  color: var(--subtitle);
+  margin-top: 0.2rem;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.sort-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid rgb(71, 69, 69);
+  box-shadow: 0 0 8px rgb(113, 202, 253,0.8);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.sort-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgb(113, 202, 253,0.9);
+}
+
+.btn-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-group a {
+  text-decoration: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group a:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Toggle Switch */
+.toggle-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #373757;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.back-btn {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.back-btn:hover {
+  background-color: #222;
+}
+
+body.dark .back-btn {
+  background-color: #ccc;
+  color: #111;
+}

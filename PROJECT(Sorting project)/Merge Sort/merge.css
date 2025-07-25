@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #111;
+  text-decoration: underline;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Two-column layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-panel {
+  width: 30%;
+  background: #e0e0e0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.left-panel h3 {
+  text-align: center;
+}
+
+.right-panel {
+  width: 70%;
+  padding: 20px;
+  background: #eeeded;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button:nth-of-type(1) {
+  background-color: #4caf50;
+  color: white;
+}
+
+button:nth-of-type(1):hover {
+  background-color: #388e3c;
+}
+
+button:nth-of-type(2) {
+  background-color: #ff9800;
+  color: white;
+}
+
+button:nth-of-type(2):hover {
+  background-color: #f57c00;
+}
+
+button:nth-of-type(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+button:nth-of-type(3):hover {
+  background-color: #d32f2f;
+}
+
+.array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  border: 1px solid #ccc;
+}
+
+.array-bar {
+  width: 30px;
+  margin: 0 4px;
+  background-color: steelblue;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#actionText {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.loop-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #444;
+}
+
+li {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AlgoSort Lab</title>
+  <link rel="stylesheet" href="./sorting.css" />
+</head>
+<body>
+  <header>
+    <h1> ALGOSORT LAB</h1>
+    <h2 class="subtitle">Explore and visualize different types of sorting algorithms.</h2>
+    <label class="toggle-switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <main class="card-section">
+    <div class="sort-card">
+      <h2>📊 Comparison-Based Sorting</h2>
+      <p>These algorithms sort by comparing elements pairwise.</p>
+      <div class="btn-group">
+        <a href="./Bubble Sort/bubble.html">Bubble Sort</a>
+        <a href="./Selection Sort/selection.html">Selection Sort</a>
+        <a href="./Insertion  Sort/insertion.html">Insertion Sort</a>
+        <a href="./Merge Sort/merge.html">Merge Sort</a>
+        <a href="./Quick Sort/quick.html">Quick Sort</a>
+      </div>
+    </div>
+
+    <div class="sort-card">
+      <h2>🔢 Non-Comparison-Based Sorting</h2>
+      <p>These algorithms sort without comparing elements directly.</p>
+      <div class="btn-group">
+        <a href="counting.html">Upcoming...</a>
+      </div>
+    </div>
+
+    <div class="sort-card">
+      <h2>💡Other Sorting Algorithms</h2>
+      <p>Alternative or specialized algorithms for different cases.</p>
+      <div class="btn-group">
+        <a href="bucket.html">Upcoming...</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <button class="back-btn" onclick="goBack()">← Back</button>
+  </footer>
+
+  <script src="./sorting.js"></script>
+</body>
+</html>

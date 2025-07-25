@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selection Sort Visualizer</title>
+  <link rel="stylesheet" href="selection.css" />
+</head>
+<body>
+<h1>Selection Sort Visualizer</h1>
+<div class="container">
+  <div class="left-panel">
+    <h3>📝 Move History :</h3>
+    <ul id="moveHistory"></ul>
+  </div>
+
+  <div class="right-panel">
+    <input type="text" id="arrayInput"   placeholder="Enter numbers separated by comma" />
+    <br>
+    <button onclick="initializeArray()">Start Sorting</button>
+    <button id="nextBtn" onclick="nextStep()" style="display: none;">Next Step</button>
+    <button id="resetBtn" onclick="resetAll()">Reset</button>
+
+    <div id="arrayDisplay"  class="array-container"></div>
+    <div id="loopInfo" class="loop-label"></div>
+    <div id="status" class="loop-label"></div>
+  </div>
+
+  <script src="selection.js"></script>
+</body>
+</html>

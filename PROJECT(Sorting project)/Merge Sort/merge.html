@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merge Sort Visualizer</title>
+  <link rel="stylesheet" href="merge.css" />
+</head>
+<body>
+  <h1>Merge Sort Visualizer</h1>
+
+  <div class="container">
+    <!-- Left: Move History -->
+    <div class="left-panel">
+      <h3>📝 Move History :</h3>
+      <ul id="moveHistory"></ul>
+    </div>
+
+    <!-- Right: Sorting UI -->
+    <div class="right-panel">
+      <input type="text" id="arrayInput" placeholder="Enter numbers separated by comma" />
+      
+      <div class="button-group">
+        <button onclick="initializeArray()">Start Sorting</button>
+        <button onclick="nextStep()" id="nextBtn" style="display: none;">Next Step</button>
+        <button onclick="resetAll()">Reset</button>
+      </div>
+
+      <div id="arrayDisplay" class="array-container"></div>
+      <p id="actionText">Press "Start Sorting" to begin.</p>
+      <div id="loopInfo" class="loop-label"></div>
+      <div id="status" class="loop-label"></div>
+    </div>
+  </div>
+
+  <script src="merge.js"></script>
+</body>
+</html>

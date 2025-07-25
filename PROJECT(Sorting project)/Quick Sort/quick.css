@@ -1,0 +1,166 @@
+/* ===== General Styling ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+/* ===== Container Layout ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  /* gap: 30px; */
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* ===== Left Panel ===== */
+.left-panel {
+  width: 400px;
+  min-height: 500px;
+  max-height: 900px;
+  overflow-y: auto;
+  background-color: white;
+  background: #e0e0e0;
+  /* padding: 15px 20px; */
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+#moveHistory {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ===== Right Panel ===== */
+.right-panel {
+  flex: 1;
+  min-width: 500px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eeeded;
+}
+
+/* ===== Input Field ===== */
+#arrayInput {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ===== Buttons ===== */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 10px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.button-group button:nth-child(1) {
+  background-color: #27ae60;
+}
+.button-group button:nth-child(2) {
+  background-color: #2980b9;
+}
+.button-group button:nth-child(3) {
+  background-color: #c0392b;
+}
+
+.button-group button:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== Bars and Container ===== */
+.array-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow-x: auto;
+  height: 250px;
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: inset  0 0 8px rgba(224, 222, 222, 0.1);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Each bar inside a wrapper */
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Bar Style */
+.bar {
+  width: 22px;
+  min-width: 22px;
+  background-color: #3498db;
+  border-radius: 4px;
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+/* Number under bar */
+.bar-label {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+/* Bar highlight states */
+.bar.pivot {
+  background-color: orange !important;
+}
+.bar.compare {
+  background-color: red !important;
+}
+.bar.sorted {
+  background-color: green !important;
+}
+
+/* ===== Info Labels ===== */
+.loop-label {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #2c3e50;
+}
