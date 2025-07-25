@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Collection</title>
+  <link rel="stylesheet" href="clone.css" />
+</head>
+<body class="light">
+
+  <!-- Toggle -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <!-- Game Collection -->
+  <section class="game-section">
+    <h1 class="section-title">Clone Projects</h1>
+
+    <div class="card-grid">
+      <div class="card" onclick="openGame('sportify')">
+        <img src="./pic-sportify.webp" alt="Simon Game">
+        <div class="card-content">
+          <h2>Sportify Clone</h2>
+          <p>Sportify's Home Page clone using HTML, CSS.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="openGame('myntra')">
+        <img src="./pic-myntra.jpg" alt="Drum Kit">
+        <div class="card-content">
+          <h2>Myntra Clone</h2>
+          <p>Myntra's small functioning clone using HTML, CSS and JS.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <button class="back-btn" onclick="goBack()">← Back</button>
+  </footer>
+
+  <script src="clone.js"></script>
+</body>
+</html>
