@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Web Development Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleTheme()">☀️↔️🌙</button>
+
+  <section class="intro">
+    <img src="./Images/profile photo.jpg" alt="My Photo">
+    <h1>Niki Kumari</h1>
+    <p>Web Development Learner | Frontend Enthusiast </p>
+  </section>
+
+  <!-- basic project -->
+  <section class="section">
+    <h2>🔰 Basic Projects</h2>
+    <div class="projects">
+
+       <a class="card" href="./PROJECT(Sorting project)/sorting.html">
+        <img src="Images/Sorting-Algorithms.png" alt="Sorting" />
+        <div class="card-content">
+          <h3>AlgoSort Lab</h3>
+          <p>Explore, Visualize Sorting Algorithms-One Step at a Time</p>
+        </div>
+      </a>
+
+      <a class="card" href="./PROJECT(Games)/game.html" >
+        <img src="./Images/gamepic.jpg" alt="Game" />
+        <div class="card-content">
+          <h3>Game Section</h3>
+          <p> Game built using HTML, CSS, JS.</p>
+        </div>
+      </a>
+
+      <a class="card" href="./Clone Project/clone.html" >
+        <img src="./Images/cloning website.png" alt="Clone" />
+        <div class="card-content">
+          <h3>Website Clone</h3>
+          <p>Website clone built using basic HTML, CSS, JS.</p>
+        </div>
+      </a>
+
+      <a class="card" href="./PROJECT(Todo App)/todo.html" >
+        <img src="./Images/todo pic.png" alt="Todo App" />
+        <div class="card-content">
+          <h3>Todo App</h3>
+          <p>A simple todo app with add/delete features.</p>
+        </div>
+      </a>
+
+      <a class="card" href="./PROJECT(Calculator)/calculator.html" >
+        <img src="./Images/calc.jpg" alt="Calculator" />
+        <div class="card-content">
+          <h3>Calculator</h3>
+          <p>Basic calculator using vanilla JavaScript.</p>
+        </div>
+      </a>
+
+      
+    </div>
+  </section>
+
+  <!-- Intermediate Projects -->
+  <section class="section">
+    <h2>🚀 Intermediate Projects</h2>
+    <div class="projects">
+      <a class="card" href="https://your-link-to-blog" >
+        <img src="images/intermediate1.png" alt="..." />
+        <div class="card-content">
+          <h3>Upcoming...</h3>
+          <p></p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Advanced Projects -->
+  <section class="section">
+    <h2>💡 Advanced Projects</h2>
+    <div class="projects">
+      <a class="card" href="https://your-link-to-ecommerce" >
+        <img src="images/advanced1.png" alt="..." />
+        <div class="card-content">
+          <h3>Upcoming...</h3>
+          <p></p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
